@@ -1,7 +1,9 @@
 FROM node:buster
 
 # Create app directory
-WORKDIR .
+COPY . app
+WORKDIR app
+
 RUN npm install > /dev/null
 
 EXPOSE 3000

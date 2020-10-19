@@ -9,14 +9,21 @@ function Hello({polilla}){
 
 function App() {
 
+  var [cosa,setCosa] = React.useState({valor: "2000"});
 
+  const change = (e)=>{
+    
+    setCosa({valor : e.target.value});
+  }
+;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload {cosa.valor}.
         </p>
+        <input type='text' value={cosa.valor} name='input' onChange={change} />
         <Hello polilla="hellloo2" />
         <a
           className="App-link"
