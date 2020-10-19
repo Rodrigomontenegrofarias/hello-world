@@ -1,5 +1,7 @@
 {
-    "build": { "dockerfile": "Dockerfile"},
+    "name":"test-1",
+    "build": {"dockerfile":"Dockerfile", "context": ".."},
+    "workspaceFolder":"/app",
     "forwardPorts": [3000],
     "extensions": ["dbaeumer.vscode-eslint","eamodio.gitlens"]
   }
